@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ControlsWindow</class>
+ <widget class="QWidget" name="ControlsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>748</width>
+    <height>366</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Control Panel</string>
+  </property>
+  <layout class="QGridLayout">
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <item row="2" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="manual_control_section">
+       <item>
+        <layout class="QVBoxLayout" name="up_section">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>1</number>
+         </property>
+         <property name="topMargin">
+          <number>1</number>
+         </property>
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <property name="bottomMargin">
+          <number>1</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="up_label">
+           <property name="text">
+            <string>Up:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="up_input">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="placeholderText">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="down_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="down_label">
+           <property name="text">
+            <string>Down:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="down_input">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="placeholderText">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="left_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="left_label">
+           <property name="text">
+            <string>Left</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="left_input">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="placeholderText">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="right_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="right_label">
+           <property name="text">
+            <string>Right</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="right_input">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="placeholderText">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="out_of_dish_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="out_of_dish">
+           <property name="text">
+            <string>Up (out of dish)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="out_of_dish_input">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="into_dish_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="into_dish">
+           <property name="text">
+            <string>Down (into dish)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="into_dish_input">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="button_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QPushButton" name="stop_button">
+           <property name="text">
+            <string>Stop</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignBottom">
+          <widget class="QPushButton" name="execute_button">
+           <property name="text">
+            <string>Execute</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="pid_section">
+       <item>
+        <layout class="QVBoxLayout" name="enable_pid_section">
+         <item alignment="Qt::AlignTop">
+          <widget class="QCheckBox" name="enable_pid_box">
+           <property name="text">
+            <string>Enable PID</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="kp_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="kp_label">
+           <property name="text">
+            <string>Kp</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="kp_input">
+           <property name="text">
+            <string>0.1</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="ki_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="ki_label">
+           <property name="text">
+            <string>Ki</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="ki_input">
+           <property name="text">
+            <string>0.01</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="kd_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="kd_label">
+           <property name="text">
+            <string>Kd</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="kd_input">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="dt_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="dt_label">
+           <property name="text">
+            <string>dt</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="dt_input">
+           <property name="text">
+            <string>0.1</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="pid_max_voltage_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="pid_max_voltage_label">
+           <property name="text">
+            <string>Max Voltage</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="pid_max_voltage_input">
+           <property name="text">
+            <string>2.5</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="offset_voltage_section">
+         <item>
+          <widget class="QLabel" name="offset_voltage_label">
+           <property name="text">
+            <string>Voltage Offset</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="offset_voltage_input">
+           <property name="text">
+            <string>0.8</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="update_PID_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QPushButton" name="update_PID_button">
+           <property name="text">
+            <string>Apply PID Settings</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="predictive_controller_section">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="enable_predictive_section">
+         <item alignment="Qt::AlignTop">
+          <widget class="QCheckBox" name="enable_predictive_box">
+           <property name="text">
+            <string>Enable Predictive Controller</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="FPS_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="FPS_label">
+           <property name="text">
+            <string>Camera Frames per Second</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="FPS_input">
+           <property name="text">
+            <string>4</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="refresh_rate_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="refresh_rate_label">
+           <property name="text">
+            <string>Refresh rate (per frame)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="refresh_rate_input">
+           <property name="text">
+            <string>5</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="decrease_factor_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="decrease_factor_label">
+           <property name="text">
+            <string>Decrease factor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="decrease_factor_input">
+           <property name="text">
+            <string>0.333</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="update_predictive_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QPushButton" name="update_predictive_button">
+           <property name="text">
+            <string>Apply Predictive Settings</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="opc_section">
+       <item>
+        <layout class="QVBoxLayout" name="enable_opc_section">
+         <item alignment="Qt::AlignTop">
+          <widget class="QCheckBox" name="enable_opc_box">
+           <property name="text">
+            <string>Enable One Pole Controller</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="opc_proportion_factor_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="opc_proportion_factor_label">
+           <property name="text">
+            <string>Proportional Factor</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="opc_proportion_factor_input">
+           <property name="text">
+            <string>0.001</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="opc_max_voltage_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="opc_max_voltage_label">
+           <property name="text">
+            <string>Max Voltage</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="opc_max_voltage_input">
+           <property name="text">
+            <string>2.5</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="opc_offset_voltage_section">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QLabel" name="opc_offset_voltage_label">
+           <property name="text">
+            <string>Voltage Offset</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="opc_offset_voltage_input">
+           <property name="text">
+            <string>0.8</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="update_opc_settings_section">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMinimumSize</enum>
+         </property>
+         <item alignment="Qt::AlignBottom">
+          <widget class="QPushButton" name="update_opc_button">
+           <property name="text">
+            <string>Apply One-Pole Settings</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="information_section">
+       <item>
+        <layout class="QVBoxLayout" name="tracking_status_section">
+         <item>
+          <widget class="QLabel" name="tracking_status_label">
+           <property name="text">
+            <string>Tracking: Off</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="pid_status_section">
+         <item>
+          <widget class="QLabel" name="pid_status_label">
+           <property name="text">
+            <string>PID Control: Off</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="predictive_status_section">
+         <item>
+          <widget class="QLabel" name="predictive_status_label">
+           <property name="text">
+            <string>Predictive Control:  Off</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="onepole_status_section">
+         <item>
+          <widget class="QLabel" name="onepole_status_label">
+           <property name="text">
+            <string>One-Pole Control: Off</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="logging_status_section">
+         <item>
+          <widget class="QLabel" name="logging_status_label">
+           <property name="text">
+            <string>Logging: Off</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="screen_recording_status_section">
+         <item>
+          <widget class="QLabel" name="screen_recording_status_label">
+           <property name="text">
+            <string>Screen Recording: Off</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
