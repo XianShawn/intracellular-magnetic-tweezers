@@ -8,3 +8,6 @@
 - modify .pro file to point library paths to where you installed OpenCV
 - put the OpenCV library directory in system path
 - if you get error code 0xc0000135 when running, put cbw32.dll and cbw64.dll in the output build directory (build-LKTracking-.../debug or release)
+
+## Figure and Data
+- GitHub does not allow depositing figures and data. They can be accessed through https://www.dropbox.com/home/intracellular%20magnetic%20actuation/data%20and%20figures
